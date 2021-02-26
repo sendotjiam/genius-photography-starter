@@ -1,14 +1,160 @@
+/* import font dari google: Playfair Display */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+/* import font dari google: Montserrat */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 :root {
 	--white: #f7f7f7;
 	--black: #121212;
-	--black-layer: rgba(0, 0, 0, 0.3);
 }
 
 * {
+	box-sizing: border-box;
+}
+
+html,
+body {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	font-family: "Montserrat", sans-serif;
+	scroll-behavior: smooth;
+}
+
+.container {
+	padding: 0 6rem;
+}
+
+.hero .hero-wrapper {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(../img/hero.jpg);
+	background-size: cover;
+	color: var(--white);
+}
+
+.hero .hero-wrapper h1,
+.about .about-wrapper h1,
+.work .work-wrapper h1,
+.contact .contact-wrapper h1 {
+	font-family: "Playfair Display", sans-serif;
+}
+
+.hero .hero-wrapper h1 {
+	font-size: 72px;
+	margin-bottom: 0.5rem;
+}
+
+.about .about-wrapper h1,
+.work .work-wrapper h1,
+.contact .contact-wrapper h1 {
+	font-size: 54px;
+	margin-bottom: 2rem;
+}
+
+.contact .contact-wrapper h1 {
+	margin-bottom: 1rem;
+}
+
+.work .work-wrapper h1 {
+	margin-bottom: 0;
+}
+
+.hero .hero-wrapper p {
+	font-size: 18px;
+}
+
+.hero .hero-wrapper a {
+	text-decoration: none;
+	color: var(--white);
+	position: absolute;
+	bottom: 50px;
+	background: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(5px);
+	padding: 12px 40px;
+	border: none;
+	border-radius: 25px;
+	font-weight: 600;
+}
+
+.about .about-wrapper,
+.work .work-wrapper,
+.contact .contact-wrapper {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.contact .contact-wrapper {
+	height: 50vh;
+	align-items: center;
+}
+
+.about-content {
+	display: flex;
+	align-items: center;
+}
+
+.about-video,
+.about-paragraph {
+	width: 50%;
+}
+
+.about-paragraph {
+	line-height: 2rem;
+	font-weight: 400;
+}
+
+.work-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 3rem;
+}
+
+.work-img {
+	width: 33%;
+	margin: 0 1rem;
+	position: relative;
+}
+
+.work-img img {
+	width: 100%;
+}
+
+.img-txt {
+	text-align: center;
+	font-weight: 600;
+}
+
+.contact .contact-wrapper hr {
+	width: 25%;
+}
+
+.contact .contact-wrapper p {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.contact-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contact-img {
+	width: 33%;
+	margin: 0 1rem;
+}
+
+.contact-img img {
+	width: 80%;
 }
